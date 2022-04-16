@@ -13,14 +13,14 @@ const Header = () => {
         <input type="text" placeholder='search photos' />
         <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4310" width="16" height="16"><path d="M864 128H160c-52.93 0-96 43.07-96 96v352.49c0 17.67 14.33 32 32 32 9.69 0 18.36-4.31 24.23-11.11l198.09-169.79 279.55 279.55c6.25 6.25 14.44 9.37 22.63 9.37s16.38-3.12 22.63-9.37c12.5-12.5 12.5-32.76 0-45.25L582 600.75l81.38-70.11 228.99 228.99c1.15 1.15 2.36 2.19 3.63 3.12V800c0 17.64-14.36 32-32 32H160c-17.65 0-32-14.36-32-32v-31c0-17.67-14.33-32-32-32s-32 14.33-32 32v31c0 52.93 43.07 96 96 96h704c52.93 0 96-43.07 96-96V224c0-52.93-43.07-96-96-96zM689.63 466.37c-0.35-0.35-0.72-0.7-1.08-1.03-11.64-12.67-31.31-13.9-44.43-2.59l-107.49 92.61-193-192.99c-0.13-0.13-0.26-0.24-0.38-0.36-11.65-12.33-31.05-13.46-44.07-2.3L128 506.43V224c0-17.65 14.35-32 32-32h704c17.64 0 32 14.35 32 32v448.74L689.63 466.37z" p-id="4311" fill="#515151"></path><path d="M768 320m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" p-id="4312" fill="#515151"></path></svg>
       </div>
-      <Link to={`/t/about`}><a>Explore</a></Link>
-      <Link to={``}><a>Advertise</a></Link>
-      <Link to={``}><a>Blog</a></Link>
+      <Link to={`/t/about`}>Explore</Link>
+      <Link to={`/`}>Advertise</Link>
+      <Link to={`/`}>Blog</Link>
       <div className='line'></div>
-      <Link to={``}><a>Login in </a></Link>
-      <Link to={``}><a>Login in</a></Link>
-      <Link to={``}><a>Submit a photo</a></Link>
-      <Link to={``}><a>三</a></Link>
+      <Link to={`/`}>Login in </Link>
+      <Link to={`/`}>Login in</Link>
+      <Link to={`/`}>Submit a photo</Link>
+      <Link to={`/`}>三</Link>
     </div>
   )
 }

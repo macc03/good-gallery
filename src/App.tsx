@@ -1,21 +1,19 @@
 import Header from './components/header';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './views/Home';
-import About from './views/About';
-import ScrollMenu from './components/scroll-menu';
-
+import Main from './views/Main/Main';
+import Wallpapers from './views/t/Wallpapers';
+import Editorial from './views/Editorial';
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        <ScrollMenu />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/t/about' element={<About />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Main />}>
+            <Route path='/' element={<Editorial />} />
+            <Route path='/t/Wallpapers' element={<Wallpapers />} />
+          </Route>
         </Routes>
       </div>
     </Router>
