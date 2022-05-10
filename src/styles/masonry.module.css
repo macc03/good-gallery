@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0
+}
+/* ::-webkit-scrollbar {
+  display: none; 
+} */
+/* 瀑布流方案1，垂直排列时，图片不按顺序展示 */
+.masonry {
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+.masonry .item {
+  border: 1px solid #999;
+  margin-bottom: 15px
+}
+.masonry img {
+  width: 100%;
+}

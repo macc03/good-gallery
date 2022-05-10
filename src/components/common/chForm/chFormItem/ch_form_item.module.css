@@ -1,0 +1,11 @@
+.label {
+  top: 50%;
+  transform: translate(8px, -50%);
+  color: rgb(146, 146, 146);
+  letter-spacing: .8px;
+  transition:0.2s ease all; 
+}
+.tips {
+  color: red;
+  font-size: 12px;
+}

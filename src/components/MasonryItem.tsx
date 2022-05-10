@@ -1,3 +1,5 @@
+import styles from '@/styles/masonry.module.css'
+
 interface MasonryItemProps {
   image: {
     img: string,
@@ -8,8 +10,8 @@ interface MasonryItemProps {
 const MasonryItem = ({ image }: MasonryItemProps) => {
   console.log(image.img)
   return (
-    <div className="masonry-item">
-      {/* <img src={require('@/assets/' + image.img).default} alt={image.title} /> */}
+    <div className={styles.masonryItem}>
+      <img src={require('@/assets/1.jpg')} alt={image.title} />
       <p>{image.title}</p>
     </div>
   )

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
-import '../styles/scroll-menu.css'
+import styles from '../styles/scroll-menu.module.css'
 
 const ScrollMenu = (props: any) => {
   const menus = ['Featured \nEntrepreneur', 'Current Events', 'Wallpapers', '3D Renders', 'Textures & Patterns', 'Experimental', 'Architecture', 'Business & Work', 'Current Events', 'Textures & Patterns', 'Experimental', 'Architecture']
@@ -22,23 +22,23 @@ const ScrollMenu = (props: any) => {
     }
   }
   return (
-    <div className="scroll-menu">
-      <div className="left">
-        <Link to={`/`} className={currentIndex === 0 ? `active` : ''} onClick={e => setIndex(0)}>Editorial</Link>
+    <div className={styles.scrollMenu}>
+      <div className={styles.left}>
+        <Link to={`/`} className={currentIndex === 0 ? styles.active : ''} onClick={e => setIndex(0)}>Editorial</Link>
       </div>
-      <div className='line'></div>
-      <div className="right">
-        <div className="menus" ref={menu}>
-          <div className="scroll-menus" ref={scrollMenu} style={{ transform: `translateX(${distance}px)`, transition: '.5s' }}>
+      <div className={styles.line}></div>
+      <div className={styles.right}>
+        <div className={styles.menus} ref={menu}>
+          <div className={styles.scrollMenus} ref={scrollMenu} style={{ transform: `translateX(${distance}px)`, transition: '.5s' }}>
             {
               menus.map((item, index) => (
-                  <Link className={currentIndex === index + 1 ? `active` : ''} onClick={e => setIndex(index + 1)} to={`/t/${item.replace(' ', '-')}`} key={index}> {item} </Link>
+                <Link className={`${styles.menuLink} ${currentIndex === index + 1 ? styles.active : ''}`} onClick={e => setIndex(index + 1)} to={`/t/${item.replace(' ', '-')}`} key={index}> {item} </Link>
               ))
             }
           </div>
         </div>
-        <div className="left-btn" onClick={e => scroll(150)}> {`<`} </div>
-        <div className="right-btn" onClick={e => scroll(-150)}>{`>`} </div>
+        <div className={styles.leftBtn} onClick={e => scroll(150)}> {`<`} </div>
+        <div className={styles.rightBtn} onClick={e => scroll(-150)}>{`>`} </div>
       </div>
     </div>
   )

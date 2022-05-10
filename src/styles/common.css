@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.center {
+  margin: auto
+}
+
+.textCenter {
+  text-align: center
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.z0 {
+  z-index: 0
+}
+
+.z1 {
+  z-index: 1
+}
+
+.z9 {
+  z-index: 999
+}
+
+.f-right {
+  float: right
+}
+
+.text-12 {
+  font-size: 12px
+}
+
+.text-16 {
+  font-size: 16px
+}
+
+.text-20 {
+  font-size: 20px
+}
+
+.mt-8 {
+  margin-top: 8px
+}
+
+.mb-8 {
+  margin-bottom: 8px
+}
+
+.mt-15 {
+  margin-top: 15px
+}
+
+.mb-15 {
+  margin-bottom: 15px
+}
+.blue {
+  color: #0984ff
+}

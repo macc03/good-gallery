@@ -21,7 +21,7 @@ a {
   width: 60px;
   margin-left: 0;
 }
-.search-input {
+.searchInput {
   flex-grow: 1;
   height: 36px;
   padding: 0 10px;
@@ -30,11 +30,11 @@ a {
   align-items: center;
   border-radius: 15px;
 }
-.search-input svg {
+.searchInput svg {
   padding: 0 5px 0 0;
   cursor: pointer;
 }
-.search-input input {
+.searchInput input {
   background-color: #e9e9e9;
   flex-grow: 1;
   border: none;

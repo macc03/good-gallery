@@ -1,0 +1,22 @@
+button {
+  width: 100%;
+  padding: 8px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+  /* background-color: red; */
+}
+button.info {
+  background-color: #fff;
+}
+button.info:hover {
+  background-color: #efefef;
+}
+button.primary {
+  background-color: #409eff;
+  color: #fff
+}
