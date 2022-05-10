@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -77,6 +81,27 @@
 .mb-15 {
   margin-bottom: 15px
 }
+
+.mr-8 {
+  margin-right: 8px
+}
+
+.mr-15 {
+  margin-right: 15px
+}
+
+.mb-0 {
+  margin-bottom: 0px
+}
+
 .blue {
   color: #0984ff
+}
+
+.br-5 {
+  border-radius: 5px
+}
+
+.w-full {
+  width: 100%
 }

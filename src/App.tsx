@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import 'antd/dist/antd.css';
 import './styles/common.css';
 import Main from './views/Main/Main';
 import Wallpapers from './views/t/Wallpapers';
