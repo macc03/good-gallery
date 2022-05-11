@@ -1,12 +1,20 @@
 import styles from '@/styles/login.module.css'
 import { Form, Input, Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import { login } from '@/api/login'
+
 
 const Login = (props: any) => {
   const navigate = useNavigate()
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    const { email, password } = values
+    login({ email, password }).then(res => {
+      navigate('/')
+    }).catch(err => {
+      console.log(err)
+    })
     navigate('/')
   }
 
