@@ -1,21 +1,14 @@
 import styles from '@/styles/login.module.css'
 import { Form, Input, Button } from 'antd'
-import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = (props: any) => {
   const navigate = useNavigate()
-  const form = useRef(null)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    navigate('/')
   }
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
 
   return (
     <div className={`${styles.loginWrapper} flex flex-column center`}>
@@ -26,21 +19,20 @@ const Login = (props: any) => {
         通过QQ登录
       </Button>
       <Form
-        ref={form}
         name='loginForm'
         labelCol={{ span: 3 }}
         labelAlign='right'
         layout='vertical'
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
+        scrollToFirstError
       >
         <Form.Item
           className='mt-15'
           label='邮箱'
           name='email'
-          rules={[{ required: true, message: 'Please input your email!' }]}
+          rules={[{ required: true, message: '请输入您的邮箱', }, { type: 'email', message: '请输入合法的邮箱' }]}
         >
-          <Input onChange={e => setEmail(e.target.value)} value={email} type="email" placeholder='Email' />
+          <Input type="email" placeholder='Email' />
         </Form.Item>
         <Form.Item
           className='mt-15 mb-0'
@@ -49,13 +41,13 @@ const Login = (props: any) => {
           label='密码'
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder='Password' />
+          <Input type="password" placeholder='Password' />
         </Form.Item>
         <Form.Item className='mb-0'>
           <Button className='f-right' type='link'>忘记密码?</Button>
         </Form.Item>
         <Form.Item wrapperCol={{ span: 24 }}>
-          <Button onClick={onFinish} className='w-full' type="primary" htmlType="submit">
+          <Button className='w-full' type="primary" htmlType="submit">
             登录
           </Button>
         </Form.Item>
